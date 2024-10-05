@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { splDiscriminate } from '../src/splDiscriminate';
-import { createHash } from 'crypto';
+import { createHash } from '../utils/hashUtils.ts';
 
 describe('splDiscrimintor', () => {
     const testVectors = [

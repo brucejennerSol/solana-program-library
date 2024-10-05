@@ -43,7 +43,8 @@
         "watch": "tsc --build --verbose --watch tsconfig.all.json"
     },
     "dependencies": {
-        "buffer": "^6.0.3"
+        "buffer": "^6.0.3",
+	"crypto-js": "^4.2.0"
     },
     "devDependencies": {
         "@types/chai": "^5.0.0",

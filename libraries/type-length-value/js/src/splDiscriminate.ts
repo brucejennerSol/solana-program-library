@@ -1,6 +1,13 @@
-import { createHash } from 'crypto';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.splDiscriminate = void 0;
 
-export const splDiscriminate = (discriminator: string, length = 8): Buffer => {
-    const digest = createHash('sha256').update(discriminator).digest();
-    return digest.subarray(0, length);
+const { createHash } = '../utils/hashUtils';
+
+export const splDiscriminate = (discriminator, length = 8) => {
+    const digest = createHash('sha256').update(discriminator).digest('hex');
+    return Buffer.from(digest, 'hex').subarray(0, length);
 };
+
+//# sourceMappingURL=splDiscriminate.js.map
+
